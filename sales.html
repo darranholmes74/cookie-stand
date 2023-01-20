@@ -5,12 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Salmon Cookies Sales Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <header></header>
+    <header>
+
+    </header>
     <main>
+        <form id="cookie-form">
+            <fieldset>
+                <legend>Create New Store</legend>
+                <div>
+                    <label for="storeName">Store City Name</label>
+                    <input id="storeName"type="text" name="storeName" placeholder="Austin"/>
+                </div>
+                <div>
+                    <label for="minCust">Minimum Customers Per Hour</label>
+                    <input type="text" id="minCust" placeholder="Add Number"/>
+                </div>
+                <div>
+                    <label for="maxCust">Maximum Customers Per Hour</label>
+                    <input type="text" id="maxCust" placeholder="Add Number"/>
+                </div>
+                <div>
+                    <label for="avgSale">Average Cookies Sold</label>
+                    <input type="text" id="avgSale" placeholder="Add Number"/>
+                </div>
+                    <button type="submit">Create Store</button>
+            </fieldset>
+        </form>
+        <section id="newStoreName">
+            <!-- <div class="newStoreName">
+                <h3></h3>
+                <p></p>
+                <ul>
+                    <li>Minimum Customers</li>
+                </ul>
+            </div> -->
+
+        </section>
         <h1>Sale Numbers</h1>
         <table id="table">
             <thead id="salesheader">
@@ -25,9 +59,10 @@
         </table>
         <nav>
             <a href="./index.html">Home Page</a>
+            <a href="./form.html"></a>
             </nav>
     </main>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
     <footer>
 
     </footer>

@@ -5,7 +5,13 @@ let tableSection = document.getElementById('table');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let tHeader = document.getElementById('headerrow')
 let tBody = document.getElementById('salesdata')
-let tFooter = document.getElementById('footerrow')
+let tFooter = document.getElementById('footerrow');
+
+let formEl = document.getElementById('cookie-form');
+// let minEl = document.getElementById('add-minimum-customers');
+// let maxEl = document.getElementById('add-maximum-customers');
+// let newStoreEl = document.getElementById('newStorName');
+
 
 
 let storeGroup = [];
@@ -19,13 +25,11 @@ function Store(storeName, minCust, maxCust, avgSale) {
     this.avgSale = avgSale;
     storeGroup.push(this);
     this.dailySalesTotal
-
 }
 
 Store.prototype.setCustPerHour = function () {
     for (let i = 0; i < hours.length; i++) {
         let custPerHour = Math.round((Math.random() * (this.maxCust - this.minCust) + this.minCust));
-        console.log(this.custPerHour);
 
         let cookieSales = Math.round(custPerHour * this.avgSale)
         console.log(cookieSales);
@@ -66,7 +70,6 @@ console.table(storeGroup);
 for (let store of storeGroup) {
     store.setCustPerHour();
     store.render();
-    renderTableHeader()
     
 }
 
@@ -80,20 +83,19 @@ for (let i = 0; i < hours.length; i++){
     tHeaderEl.textContent = hours[i];
     tHeader.appendChild(tHeaderEl);
 }
-// let lastHeaderEl = document.createElement('td');
+// let lastHeaderEl = document.createElement('th');
 // tHeader.appendChild(lastHeaderEl);
 // finalTotalEl.textContent = 'Daily Totals';
-}
+};
 
 
-
+renderTableHeader();
 renderTableFooter(storeGroup);
 
 function renderTableFooter(storeGroupArray) {
     let elementTotal = document.createElement('th')
     tFooter.appendChild(elementTotal);
     elementTotal.textContent = 'Cookie Totals';
-
     let finalTotal = 0;
     for (let i = 0; i < hours.length; i++) {
         let totalAtHour = 0;
@@ -112,3 +114,19 @@ function renderTableFooter(storeGroupArray) {
     finalTotalEl.textContent = finalTotal;
 
 }
+
+formEl.addEventListener('submit', function (event){
+    event.preventDefault();
+    let storeName = event.target.storeName.value;
+    let minCust = event.target.minCust.value;
+    let maxCust = event.target.maxCust.value;
+    let avgSale = event.target.avgSale.value;
+    new Store(storeName, minCust, maxCust, avgSale);
+    formEl.reset();
+    storeGroup[storeGroup.length - 1].setCustPerHour();
+    storeGroup[storeGroup.length - 1].render();
+    tFooter.innerHTML = "";
+    renderTableFooter(storeGroup);
+});
+
+
