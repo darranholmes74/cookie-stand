@@ -105,6 +105,7 @@ function renderTableFooter(storeGroupArray) {
             totalAtHour += storeGroupArray[j].cookieSales[i];
             finalTotal += storeGroupArray[j].cookieSales[i];
         }
+        console.log(storeGroupArray);
         cell.textContent = totalAtHour;
     }
 

@@ -7,6 +7,7 @@ html {
     border: 2px solid rgb(200,200,200);
     letter-spacing: 1px;
     font-size: 0.8rem;
+    padding-top: 30px;
   }
   
   td, th {
@@ -15,7 +16,7 @@ html {
   }
   
   th {
-    background-color: rgb(235,235,235);
+    background-color: #bfc8d9;
   }
   
   td {
@@ -23,7 +24,7 @@ html {
   }
   
   tr:nth-child(even) td {
-    background-color: rgb(250,250,250);
+    background-color: #bfc8d9;
   }
   
   tr:nth-child(odd) td {
@@ -34,6 +35,157 @@ html {
     padding: 10px;
   }
 
-  .container {
-    display: flex;
+  body, html {
+    height: 100%;
+    background-color: #eec9ab;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 15px;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .cookie-img {
+    background-image: url("cookie-stand-form.avif");
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+#cookie-form {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #eec9ab;
+  color: #7b3827;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 15px;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 8px;
+}
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  background-color: #7b3827;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.h1-index {
+  font-size: 50px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  width: 100%;
+  color: whitesmoke;
+}
+
+h1:hover {
+
+}
+
+.index {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+body.index {
+  background-image: url("salmon-img.avif");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+h2{
+  font-size: 30px;
+  color: whitesmoke;
+  padding-bottom: 30px;
+}
+
+.p-index {
+  color: whitesmoke;
+}
+
+#cities{
+  padding-bottom: 20px;
+}
+
+#hours {
+  padding-bottom: 20px;
+}
+
+#contact{
+  padding-bottom: 30px;
+}
+
+#link {
+  color: whitesmoke;
+}
+
+#link2{
+  color: #7b3827;
+}
+
+.h1-sales {
+  font-size: 35px;
+  background-color: #7b3827;
+  color: white;
+  padding: 16px 20px;
+  border-color: whitesmoke;
+  width: 50%;
+  opacity: 0.9;
+  border: solid;
+  border: thick double;
+}
+
+.main-sales{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#h1-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+hr {
+  border-top: 2px dashed #7b3827;
+}
+
+a {
+  padding: 30px;
+}

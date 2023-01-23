@@ -5,20 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Salmon Cookies Sales Page</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
 
     </header>
-    <main>
-        <form id="cookie-form">
+    <main class="main-sales">
+        <section class="cookie-img">
+        <form id="cookie-form" action="css/cookie-stand-form.avif">
             <fieldset>
                 <legend>Create New Store</legend>
                 <div>
                     <label for="storeName">Store City Name</label>
-                    <input id="storeName"type="text" name="storeName" placeholder="Austin"/>
+                    <input id="storeNamde"type="text" name="storeName" placeholder="Austin"/>
                 </div>
                 <div>
                     <label for="minCust">Minimum Customers Per Hour</label>
@@ -32,8 +37,9 @@
                     <label for="avgSale">Average Cookies Sold</label>
                     <input type="text" id="avgSale" placeholder="Add Number"/>
                 </div>
-                    <button type="submit">Create Store</button>
+                    <button type="submit" class="btn">Create Store</button>
             </fieldset>
+        </section>
         </form>
         <section id="newStoreName">
             <!-- <div class="newStoreName">
@@ -45,7 +51,9 @@
             </div> -->
 
         </section>
-        <h1>Sale Numbers</h1>
+        <div id="h1-container">
+        <h1 class="h1-sales">Sale Numbers</h1>
+        </div>
         <table id="table">
             <thead id="salesheader">
                 <tr id="headerrow">
@@ -56,11 +64,14 @@
               <tfoot id="salesfooter">
                 <tr id="footerrow"></tr>
               </tfoot>
+
         </table>
+        <section><hr></section>
+        
         <nav>
-            <a href="./index.html">Home Page</a>
-            <a href="./form.html"></a>
-            </nav>
+            <a href="./index.html" id="link2">Home Page</a>
+        </nav>
+
     </main>
     <script src="js/app.js"></script>
     <footer>
