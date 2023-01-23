@@ -103,9 +103,7 @@ input[type=text]:focus {
   color: whitesmoke;
 }
 
-h1:hover {
 
-}
 
 .index {
   width: 1000px;
@@ -188,4 +186,24 @@ hr {
 
 a {
   padding: 30px;
+}
+
+#salesheader {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #7b3827
+}
+
+#salesdata {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+#salesfooter{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: darkgray;
+}
+
+#darran{
+  color: whitesmoke;
+  padding-bottom: 20px;
 }
